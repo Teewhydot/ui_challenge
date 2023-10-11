@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_challenge/onboarding.dart';
+import 'package:ui_challenge/search_results_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,6 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-        home: IntroPage());
+        home: SearchResults());
   }
 }

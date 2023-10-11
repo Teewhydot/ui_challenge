@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:ui_challenge/generated/assets.dart';
 
@@ -27,15 +26,16 @@ class _IntroPageState extends State<IntroPage> {
       );
     }
   }
-  void lastPage(){
-      Navigator.pushNamed(context, '/home');
+
+  void lastPage() {
+    Navigator.pushNamed(context, '/home');
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children:  [
+        children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -50,13 +50,16 @@ class _IntroPageState extends State<IntroPage> {
                   },
                   children: const [
                     IntroItem(
-                      image: Assets.imagesPlant1, // Replace with your image asset.
+                      image:
+                          Assets.imagesPlant1, // Replace with your image asset.
                     ),
                     IntroItem(
-                      image:  Assets.imagesPlant2, // Replace with your image asset.
+                      image:
+                          Assets.imagesPlant2, // Replace with your image asset.
                     ),
                     IntroItem(
-                      image:  Assets.imagesPlant3, // Replace with your image asset.
+                      image:
+                          Assets.imagesPlant3, // Replace with your image asset.
                     ),
                   ],
                 ),
@@ -78,19 +81,26 @@ class _IntroPageState extends State<IntroPage> {
                 }),
               ),
               const SizedBox(height: 56.0),
-              const Text('Get started with plants',style: TextStyle(
-                  fontSize: 36
-              ),),
+              const Text(
+                'Get started with plants',
+                style: TextStyle(fontSize: 36),
+              ),
               Expanded(
                 flex: 1,
                 child: GestureDetector(
-                  onTap:_nextPage ,
+                  onTap: _nextPage,
                   child: CircleAvatar(
                     backgroundColor: Colors.green,
                     radius: 50,
                     child: _currentPage == 2
-                        ? const Icon(Icons.check, size: 50,)
-                        : const Icon(Icons.arrow_forward,size: 50, ),
+                        ? const Icon(
+                            Icons.check,
+                            size: 50,
+                          )
+                        : const Icon(
+                            Icons.arrow_forward,
+                            size: 50,
+                          ),
                   ),
                 ),
               ),
@@ -99,9 +109,11 @@ class _IntroPageState extends State<IntroPage> {
           Positioned(
             top: 20,
             right: 0,
-            child: TextButton(onPressed: (){
-              lastPage();
-            }, child: const Text('Skip')),
+            child: TextButton(
+                onPressed: () {
+                  lastPage();
+                },
+                child: const Text('Skip')),
           ),
         ],
       ),
@@ -112,15 +124,16 @@ class _IntroPageState extends State<IntroPage> {
 class IntroItem extends StatelessWidget {
   final String image;
 
-  const IntroItem({super.key, required this.image,});
+  const IntroItem({
+    super.key,
+    required this.image,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset(image,fit: BoxFit.cover,), // Adjust the height as needed.
-      ],
-    );
+    return Image.asset(
+      image,
+      fit: BoxFit.cover,
+    ); // Adjust the height as needed.
   }
 }
