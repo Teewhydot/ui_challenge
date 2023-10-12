@@ -15,6 +15,7 @@ class _SearchResultsState extends State<SearchResults> {
       backgroundColor: Colors.white70,
       body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Padding(
             padding: EdgeInsets.all(10.0),
@@ -36,6 +37,7 @@ class _SearchResultsState extends State<SearchResults> {
           const SizedBox(
             height: 10,
           ),
+
           Row(
             children: [
               // text field for search
@@ -68,6 +70,16 @@ class _SearchResultsState extends State<SearchResults> {
           ),
           const SizedBox(
             height: 20,
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 40, top: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Found', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                Text('10 Results', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+              ],
+            ),
           ),
           const Expanded(child: ContainerGrid()),
         ],
