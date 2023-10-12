@@ -63,7 +63,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                   color: Colors.blueGrey,
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.only(left: 10, right: 10,bottom: 20,top: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
